@@ -1,0 +1,46 @@
+# TwoSortedArrays
+using System;
+
+namespace Algorithm
+{
+    class MedianOfTwoSortedArray
+    {
+        static void Main(String[] args)
+        {
+            int[] a = { 2, 4, 6, 8, 10, 12, 16 };
+            int[] b = { 3, 5, 9, 11, 15 };
+            
+            double m = FindMedianSortedArrays(a, b);
+
+            Console.Write(m.ToString());
+
+            Console.ReadLine();
+        }
+        
+        static public double FindMedianSortedArrays(int[] nums1, int[] nums2)
+        {
+            
+            int[] nums = AddTwoSortedArrays.MergeArrays(nums1, nums2);
+            for(int i = 0; i < nums.Length; i++)
+                 Console.Write("{0}  ", nums[i].ToString());
+            Console.WriteLine();
+            int len = nums.Length;
+
+            if (len == 1)
+            {
+                return nums[0];
+            }
+            else if (len >= 2)
+            {
+                int hf = len / 2;
+                if (len % 2 == 1)
+                    return nums[hf];
+                else
+                    return (double)(nums[hf - 1] + nums[hf]) / 2;
+            }
+            else
+                throw new ArgumentException("Empty array.");
+            
+        }        
+    }
+}
