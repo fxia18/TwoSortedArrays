@@ -1,7 +1,7 @@
 # TwoSortedArrays
 using System;
 
-namespace Algorithm
+namespace TwoSortedArray
 {
     class MedianOfTwoSortedArray
     {
