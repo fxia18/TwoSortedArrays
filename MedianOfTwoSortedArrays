@@ -1,3 +1,4 @@
+# TwoSortedArrays
 using System;
 
 namespace Algorithm
@@ -39,6 +40,7 @@ namespace Algorithm
             }
             else
                 throw new ArgumentException("Empty array.");
-       }
-     }
-   }
+            
+        }        
+    }
+}
